@@ -31,7 +31,7 @@ Validation metrics after 15 epochs at 640×640:
 
 Sample prediction on a validation image:
 
-![Sample prediction](output.png)
+![Sample prediction](docs/output.png)
 
 Training curves and the confusion matrix are in `yolov8_results/`
 (`results.png`, `confusion_matrix.png`, `BoxPR_curve.png`).
@@ -67,7 +67,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-The full workflow lives in the notebooks under `2022170268/`:
+The full workflow lives in the notebooks under `notebooks/`:
 
 - `yolo-V5.ipynb` — train and evaluate YOLOv5n
 - `yolo-V8.ipynb` — train and evaluate YOLOv8n
@@ -93,13 +93,17 @@ print(f"mAP50: {metrics.box.map50}")
 ## Project structure
 
 ```
-2022170268/          # Notebooks (YOLOv5 & YOLOv8) + training report
-oldYolo.ipynb        # Earlier end-to-end notebook
+notebooks/
+  yolo-V5.ipynb      # Train and evaluate YOLOv5n
+  yolo-V8.ipynb      # Train and evaluate YOLOv8n
+  oldYolo.ipynb      # Earlier end-to-end notebook
+docs/
+  Training Report.pdf  # Write-up of the experiment
+  report.txt           # YOLOv5 validation metrics
+  output.png           # Example prediction
 dataset/data.yaml    # YOLO dataset config (3 classes)
 data.csv             # Source bounding-box annotations
 yolov8_results/      # Training curves, confusion matrix, metrics
-report.txt           # YOLOv5 validation metrics
-output.png           # Example prediction
 ```
 
 ## License
